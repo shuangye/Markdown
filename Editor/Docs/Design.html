@@ -1,0 +1,115 @@
+<h1>HTML &amp; Markdown</h1>
+
+<p>HTML: inline, block, inline-block, float.</p>
+
+<p>Markdown: only block and inline (span).</p>
+
+<h1>Design</h1>
+
+<p>Able to convert between Markdown, HTML, and docx.</p>
+
+<p>Export to PDF.</p>
+
+<p>First level: block.</p>
+
+<p>Keep 2 lines in scope: one is the current line, and the other is the next line.</p>
+
+<p>On line processing: parse while splitting.</p>
+
+<h2>Blocks</h2>
+
+<h1>Setext-style Heading 1</h1>
+
+<h2>Setext-style Heading 2</h2>
+
+<p>Atx-style headers supports heading 1 - 6 using hash characters. Optionally, you can close the header using (even a different number of) hash characters.</p>
+
+<h3>Atx-style Heading 3</h3>
+
+<p>Markdown supports "hard-wrapped" text paragraphs. A line break character in a paragraph will not be translated to a <code>&lt;/br&gt;</code> tag.
+When you <em>do</em> want to insert a <code>&lt;br /&gt;</code> break tag using Markdown, you end a line with two or more spaces, then type return. <br />
+Paragraphs are separated by >= 1 blank lines. A blank line is a line that contain only white space characters. Normal paragraphs should not be indented.</p>
+
+<blockquote>
+  <p>Markdown uses email-style <code>&gt;</code> characters for blockquoting.
+It looks best if you hard wrap the text and put a <code>&gt;</code> before every line.</p>
+
+<p>Markdown allows you to be lazy and only put the <code>&gt;</code> before the first line of a hard-wrapped paragraph:</p>
+</blockquote>
+
+<p>Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by adding additional levels of >:</p>
+
+<blockquote>
+  <p>quote level 1. </p>
+
+<blockquote>
+  <p>quote level 2.</p>
+</blockquote>
+
+<p>back to the first level.</p>
+
+<p></blockquote></p>
+
+<p>Blockquotes can contain other Markdown elements, including headers, lists, and code blocks:</p>
+
+<blockquote>
+  <h2>Quoted header.</h2>
+
+<ol>
+<li>This is the first list item.</li>
+<li>This is the second list item.</li>
+</ol>
+
+<p>Here's some example code:</p>
+
+<pre><code>return shell_exec("echo $input | $markdown_script");
+</code></pre>
+</blockquote>
+
+<p>Unordered list begins with *, -, or +</p>
+
+<ul>
+<li>unordered list 1</li>
+<li>unordered list 2</li>
+<li>unordered list 3</li>
+</ul>
+
+<p>Ordered lists use numbers followed by periods. The actual numbers you use to mark the list have no effect on the HTML output Markdown produces:</p>
+
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
+</ol>
+
+<h2>Spans</h2>
+
+<p><code>__Nested__</code></p>
+
+<p><strong><code>Nested</code></strong></p>
+
+<h2>Indent</h2>
+
+<p>像 Python 一样严格。</p>
+
+<p>四个空格产生一个 indent.</p>
+
+<p>开头空格 &lt; 4 个，不产生任何意义。 </p>
+
+<h1>References</h1>
+
+<h2>Syntax</h2>
+
+<p>http://daringfireball.net/projects/markdown/syntax</p>
+
+<h2>Parsedown</h2>
+
+<p>https://github.com/erusev/parsedown</p>
+
+<p>How does Parsedown work?</p>
+
+<p>It splits text into lines. Then it looks at how these lines start and relate to each other</p>
+
+<p>It tries to read Markdown like a human. First, it looks at the lines. It’s interested in how the lines start. This helps it recognise blocks. It knows, for example, that if a line start with a - then it perhaps belong to a list. Once it recognises the blocks, it continues to the content. As it reads, it watches out for special characters. This helps it recognise inline elements (or inlines).</p>
+
+<p>We call this approach "line based". We believe that Parsedown is the first Markdown parser to use it. Since the release of Parsedown, other developers have used the same approach to develop other Markdown parsers in PHP and in other languages.</p>

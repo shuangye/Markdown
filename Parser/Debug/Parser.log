@@ -1,0 +1,32 @@
+﻿Build started 3/27/2015 16:32:52.
+     1>Project "D:\Github\Markdown\Parser\Parser.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D MARKDOWN_LIB_API_EXPORT /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt global_vars.c markdown_parser.c
+         markdown_parser.c
+         global_vars.c
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D MARKDOWN_LIB_API_EXPORT /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt lib_api.cpp odf.cpp output.cpp Parser.cpp parsings.cpp utilities.cpp
+         utilities.cpp
+         parsings.cpp
+         Parser.cpp
+     1>d:\github\markdown\parser\parser.cpp(20): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'long', possible loss of data
+         output.cpp
+         odf.cpp
+         lib_api.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\Markdown\Debug\Parser.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Github\Markdown\Debug\Parser.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Github\Markdown\Debug\Parser.lib" /MACHINE:X86 Debug\global_vars.obj
+         Debug\lib_api.obj
+         Debug\markdown_parser.obj
+         Debug\odf.obj
+         Debug\output.obj
+         Debug\Parser.obj
+         Debug\parsings.obj
+         Debug\utilities.obj
+            Creating library D:\Github\Markdown\Debug\Parser.lib and object D:\Github\Markdown\Debug\Parser.exp
+         Parser.vcxproj -> D:\Github\Markdown\Debug\Parser.exe
+     1>Done Building Project "D:\Github\Markdown\Parser\Parser.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.82
