@@ -393,7 +393,8 @@ static void print_html_element(string *out, element *elt, bool obfuscate) {
         break;
     default: 
         fprintf(stderr, "print_html_element encountered unknown element key = %d\n", elt->key); 
-        exit(EXIT_FAILURE);
+        // exit(EXIT_FAILURE);
+		break;
     }
 }
 
@@ -640,7 +641,8 @@ static void print_latex_element(string *out, element *elt) {
         break;
     default: 
         fprintf(stderr, "print_latex_element encountered unknown element key = %d\n", elt->key); 
-        exit(EXIT_FAILURE);
+        // exit(EXIT_FAILURE);
+		break;
     }
 }
 
@@ -856,7 +858,8 @@ static void print_groff_mm_element(string *out, element *elt, int count) {
         break;
     default: 
         fprintf(stderr, "print_groff_mm_element encountered unknown element key = %d\n", elt->key); 
-        exit(EXIT_FAILURE);
+        // exit(EXIT_FAILURE);
+		break;
     }
 }
 
@@ -1191,7 +1194,8 @@ static void print_odf_element(string *out, element *elt) {
         break;
         break;  default:
         fprintf(stderr, "print_odf_element encountered unknown element key = %d\n", elt->key);
-        exit(EXIT_FAILURE);
+        // exit(EXIT_FAILURE);
+		break;
     }
 }
 

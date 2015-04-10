@@ -63,7 +63,7 @@ enum keys {
 	NOTE
 };
 
-/* Semantic value of a parsing action. */
+/* Internal semantic representation of a document */
 struct Element {
 	int               key;
 	union Contents    contents;

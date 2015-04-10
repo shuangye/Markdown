@@ -38,9 +38,8 @@ static void print_tree(element * elt, int indent);
 static string* preformat_text(char *text) {
 	if (nullptr == text)
 		return nullptr;
-
-	const int Tabstop = 4;	
-	const string tab_expansion = string(Tabstop, ' ');  // stack allocation	
+	
+	const char* tab_expansion = "    ";  // tabstop = 4
 	string *result = new string();
 
 	char next_char;
@@ -113,7 +112,9 @@ string* markdown_to_cpp_string(char *text, int extensions, int output_format) {
 
 	out = new string();  // allocate memory; to be freed by caller
 
+#ifdef _DEBUG
 	print_tree(parsing_result, 10);
+#endif
 
 	print_element_list(out, parsing_result, output_format, extensions);
 
@@ -141,6 +142,7 @@ char* markdown_to_string(char *text, int extensions, int output_format) {
 /// Misc
 //////////////////////////////////////////////////////////////////////
 
+#ifdef _DEBUG
 
 /// for debugging only
 /// print_tree - print tree of elements
@@ -198,3 +200,5 @@ static void print_tree(element * elt, int indent) {
 		elt = elt->next;
 	}
 }
+
+#endif
